@@ -1,11 +1,11 @@
 import Main from './components/main'
-import PojectItem from './components/projectItem'
+import Projects from './components/projects'
 
 export default function Home() {
   return (
     <section>
       <Main />
-      <PojectItem />
+      <Projects />
     </section>
   )
 }
