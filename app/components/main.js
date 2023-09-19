@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
-const Main = () => {
+export default function Main () {
   return (
     <section id="home">
       <h1 className="font-bold text-2xl mb-8 tracking-tighter">
@@ -32,4 +32,3 @@ const Main = () => {
   );
 };
 
-export default Main;

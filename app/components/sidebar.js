@@ -1,5 +1,6 @@
 'use client'
 
+import { usePathname } from 'utils/hooks';
 import Link from 'next/link';
 import { LayoutGroup, motion } from 'framer-motion';
 
@@ -9,16 +10,14 @@ const navItems = {
   },
   '/projects': {
     name: 'projects',
-  },
-  '/guestbook': {
-    name: 'guestbook',
-  },
+  }
 };
 
 export default function Navbar() {
+  let pathname = usePathname() || '/';
+
   // Get the current pathname, using window.location.pathname on the client-side,
   // or fallback to '/' if running on the server-side where window is undefined.
-  const pathname = typeof window !== 'undefined' ? window.location.pathname : '/';
 
   return (
     <aside className="-ml-[8px] mb-16 tracking-tight">
